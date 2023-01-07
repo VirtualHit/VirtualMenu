@@ -20,4 +20,12 @@ public class VirtualMenu {
     public static void removePlayer(Player player) {
         playerMenu.remove(player);
     }
+
+    public static HashMap<Player, Menu> getPlayerMenu() {
+        return playerMenu;
+    }
+
+    public static void setPlayerMenu(HashMap<Player, Menu> playerMenu) {
+        VirtualMenu.playerMenu = playerMenu;
+    }
 }
