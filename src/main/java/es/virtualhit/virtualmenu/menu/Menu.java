@@ -29,7 +29,7 @@ public class Menu {
         return id;
     }
 
-    public String getTitle() {
+    public Component getTitle() {
         return title;
     }
 
