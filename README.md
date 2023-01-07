@@ -34,7 +34,7 @@ dependencies {
 
 ## 📋 NOTAS
 
-- Se recomienda registrar el listener `InventoryClickListener` y escuchar el evento `PlayerClickMenuItemEvent`.
+- Se recomienda registrar los listeners `InventoryClickListener`, `InventoryCloseListener` y escuchar el evento `PlayerClickMenuItemEvent`.
 
 ## 👪 Autores
 
