@@ -28,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    compile"com.github.VirtualHit:VirtualUsersAPI:v1.0.0"
+    compile"com.github.VirtualHit:VirtualMenu:v1.0.0"
 }
 ```
 
