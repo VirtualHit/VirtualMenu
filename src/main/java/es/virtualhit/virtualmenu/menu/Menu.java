@@ -9,12 +9,12 @@ import java.util.HashMap;
 
 public class Menu {
 
-    private final String id;
-    private final Component title;
-    private final MenuType type;
-    private final int size;
-    private final HashMap<Integer, MenuItem> items;
-    private final Material background;
+    private String id;
+    private Component title;
+    private MenuType type;
+    private int size;
+    private HashMap<Integer, MenuItem> items;
+    private Material background;
 
     public Menu(String id, Component title, MenuType type, int size, HashMap<Integer, MenuItem> items, Material background) {
         this.id = id;
@@ -47,5 +47,29 @@ public class Menu {
 
     public Material getBackground() {
         return background;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitle(Component title) {
+        this.title = title;
+    }
+
+    public void setType(MenuType type) {
+        this.type = type;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setItems(HashMap<Integer, MenuItem> items) {
+        this.items = items;
+    }
+
+    public void setBackground(Material background) {
+        this.background = background;
     }
 }

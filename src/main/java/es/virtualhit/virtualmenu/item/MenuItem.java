@@ -5,9 +5,9 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 public class MenuItem {
-    private final String id;
-    private final ItemStack item;
-    private final ItemAction action;
+    private String id;
+    private ItemStack item;
+    private ItemAction action;
 
     public MenuItem(String id, ItemStack item, @Nullable ItemAction action) {
         this.id = id;
@@ -25,5 +25,17 @@ public class MenuItem {
 
     public ItemAction getAction() {
         return action;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setItem(ItemStack item) {
+        this.item = item;
+    }
+
+    public void setAction(ItemAction action) {
+        this.action = action;
     }
 }
