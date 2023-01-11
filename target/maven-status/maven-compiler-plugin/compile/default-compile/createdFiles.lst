@@ -1,0 +1,10 @@
+es/virtualhit/virtualmenu/inventory/InventoryBuilder$1.class
+es/virtualhit/virtualmenu/menu/Menu.class
+es/virtualhit/virtualmenu/inventory/InventoryBuilder.class
+es/virtualhit/virtualmenu/listener/InventoryClickListener.class
+es/virtualhit/virtualmenu/event/PlayerClickMenuItemEvent.class
+es/virtualhit/virtualmenu/listener/InventoryCloseListener.class
+es/virtualhit/virtualmenu/item/action/ItemAction.class
+es/virtualhit/virtualmenu/item/MenuItem.class
+es/virtualhit/virtualmenu/VirtualMenu.class
+es/virtualhit/virtualmenu/menu/type/MenuType.class

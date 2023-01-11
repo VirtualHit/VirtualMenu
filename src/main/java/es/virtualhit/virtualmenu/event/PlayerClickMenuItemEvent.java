@@ -44,7 +44,7 @@ public class PlayerClickMenuItemEvent extends PlayerEvent implements Cancellable
 
     @Override
     public boolean isCancelled() {
-        return false;
+        return cancelled;
     }
 
     @Override
