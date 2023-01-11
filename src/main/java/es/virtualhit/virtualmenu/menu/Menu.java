@@ -3,7 +3,7 @@ package es.virtualhit.virtualmenu.menu;
 import es.virtualhit.virtualmenu.item.MenuItem;
 import es.virtualhit.virtualmenu.menu.type.MenuType;
 import net.kyori.adventure.text.Component;
-import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 
@@ -14,9 +14,9 @@ public class Menu {
     private MenuType type;
     private int size;
     private HashMap<Integer, MenuItem> items;
-    private Material background;
+    private ItemStack background;
 
-    public Menu(String id, Component title, MenuType type, int size, HashMap<Integer, MenuItem> items, Material background) {
+    public Menu(String id, Component title, MenuType type, int size, HashMap<Integer, MenuItem> items, ItemStack background) {
         this.id = id;
         this.title = title;
         this.type = type;
@@ -29,47 +29,47 @@ public class Menu {
         return id;
     }
 
-    public Component getTitle() {
-        return title;
-    }
-
-    public MenuType getType() {
-        return type;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public HashMap<Integer, MenuItem> getItems() {
-        return items;
-    }
-
-    public Material getBackground() {
-        return background;
-    }
-
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Component getTitle() {
+        return title;
     }
 
     public void setTitle(Component title) {
         this.title = title;
     }
 
+    public MenuType getType() {
+        return type;
+    }
+
     public void setType(MenuType type) {
         this.type = type;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     public void setSize(int size) {
         this.size = size;
     }
 
+    public HashMap<Integer, MenuItem> getItems() {
+        return items;
+    }
+
     public void setItems(HashMap<Integer, MenuItem> items) {
         this.items = items;
     }
 
-    public void setBackground(Material background) {
+    public ItemStack getBackground() {
+        return background;
+    }
+
+    public void setBackground(ItemStack background) {
         this.background = background;
     }
 }

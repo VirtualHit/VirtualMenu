@@ -5,7 +5,6 @@ import es.virtualhit.virtualmenu.menu.Menu;
 import org.bukkit.Bukkit;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 public class InventoryBuilder {
 
@@ -28,7 +27,7 @@ public class InventoryBuilder {
             if (menuItem != null) {
                 inventory.setItem(i, menuItem.getItem());
             } else {
-                inventory.setItem(i, new ItemStack(menu.getBackground()));
+                inventory.setItem(i, menu.getBackground());
             }
         }
 
