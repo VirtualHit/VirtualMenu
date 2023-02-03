@@ -16,7 +16,7 @@ Librearia para trabajar con menus de forma más sencilla.
     <dependency>
         <groupId>com.github.VirtualHit</groupId>
         <artifactId>VirtualMenu</artifactId>
-        <version>v1.0.0</version>
+        <version>v1.0.2</version>
         <scope>compile</scope>
     </dependency>
 </dependencies>
@@ -28,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    compile"com.github.VirtualHit:VirtualMenu:v1.0.0"
+    compile"com.github.VirtualHit:VirtualMenu:v1.0.2"
 }
 ```
 
