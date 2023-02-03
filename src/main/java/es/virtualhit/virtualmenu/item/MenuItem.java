@@ -2,14 +2,16 @@ package es.virtualhit.virtualmenu.item;
 
 import es.virtualhit.virtualmenu.item.action.ItemAction;
 import org.bukkit.inventory.ItemStack;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class MenuItem {
     private String id;
     private ItemStack item;
-    private ItemAction action;
+    private List<ItemAction> action;
 
-    public MenuItem(String id, ItemStack item, @Nullable ItemAction action) {
+    public MenuItem(String id, ItemStack item, @NotNull List<ItemAction> action) {
         this.id = id;
         this.item = item;
         this.action = action;
@@ -23,7 +25,7 @@ public class MenuItem {
         return item;
     }
 
-    public ItemAction getAction() {
+    public List<ItemAction> getAction() {
         return action;
     }
 
@@ -35,7 +37,7 @@ public class MenuItem {
         this.item = item;
     }
 
-    public void setAction(ItemAction action) {
+    public void setAction(List<ItemAction> action) {
         this.action = action;
     }
 }
