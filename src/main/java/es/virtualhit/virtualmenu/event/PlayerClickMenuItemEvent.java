@@ -5,6 +5,7 @@ import es.virtualhit.virtualmenu.menu.Menu;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerEvent;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,12 +18,14 @@ public class PlayerClickMenuItemEvent extends PlayerEvent implements Cancellable
 
     private final Menu menu;
     private final MenuItem item;
+    private final InventoryClickEvent originalEvent;
     private boolean cancelled;
 
-    public PlayerClickMenuItemEvent(Player player, Menu menu, MenuItem item) {
+    public PlayerClickMenuItemEvent(Player player, Menu menu, MenuItem item, InventoryClickEvent originalEvent) {
         super(player);
         this.menu = menu;
         this.item = item;
+        this.originalEvent = originalEvent;
     }
 
     @Override
@@ -40,6 +43,10 @@ public class PlayerClickMenuItemEvent extends PlayerEvent implements Cancellable
 
     public MenuItem getItem() {
         return item;
+    }
+
+    public InventoryClickEvent getOriginalEvent() {
+        return originalEvent;
     }
 
     @Override

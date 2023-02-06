@@ -21,7 +21,7 @@ public class InventoryClickListener implements Listener {
         Menu menu = VirtualMenu.getPlayerMenu().get(player);
         MenuItem item = menu.getItems().get(event.getSlot());
 
-        PlayerClickMenuItemEvent clickEvent = new PlayerClickMenuItemEvent(player, menu, item);
+        PlayerClickMenuItemEvent clickEvent = new PlayerClickMenuItemEvent(player, menu, item, event);
         Bukkit.getPluginManager().callEvent(clickEvent);
 
         event.setCancelled(clickEvent.isCancelled());
