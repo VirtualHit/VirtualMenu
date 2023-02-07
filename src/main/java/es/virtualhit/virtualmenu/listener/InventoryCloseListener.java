@@ -9,7 +9,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 public class InventoryCloseListener implements Listener {
 
     @EventHandler
-    public void onInventoryClose(InventoryCloseEvent event) {
+    public void onClose(InventoryCloseEvent event) {
         if (!(event.getPlayer() instanceof Player player)) return;
 
         VirtualMenu.removePlayer(player);
