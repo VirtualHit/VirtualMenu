@@ -22,5 +22,6 @@ public class InventoryClickListener implements Listener {
 
         PlayerClickMenuItemEvent clickEvent = new PlayerClickMenuItemEvent(menu, item);
         item.getClickable().onClick(clickEvent);
+        event.setCancelled(clickEvent.isCancelled());
     }
 }

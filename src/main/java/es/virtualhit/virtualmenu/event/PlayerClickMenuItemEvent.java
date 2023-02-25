@@ -25,4 +25,12 @@ public class PlayerClickMenuItemEvent {
     public MenuItem getItem() {
         return item;
     }
+
+    public boolean isCancelled() {
+        return cancelled;
+    }
+
+    public void setCancelled(boolean cancelled) {
+        this.cancelled = cancelled;
+    }
 }
