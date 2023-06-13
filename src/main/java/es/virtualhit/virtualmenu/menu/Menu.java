@@ -12,7 +12,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public abstract class Menu {
 
@@ -20,17 +22,20 @@ public abstract class Menu {
     private Inventory inventory;
     private HashMap<Integer, MenuItem> items;
     private ItemStack background;
+    private List<Integer> emptySlots;
 
     public Menu(Player player) {
         this.player = player;
         this.items = new HashMap<>();
     }
 
-    public void createInventory(MenuType type, int size, Component title) {
+    public void createInventory(MenuType type, int size, Component title, List<Integer> emptySlots) {
         switch (type) {
             case CHEST -> inventory = Bukkit.createInventory(null, size, title);
             case HOPPER -> inventory = Bukkit.createInventory(null, InventoryType.HOPPER, title);
         }
+
+        this.emptySlots = emptySlots;
     }
 
     public void addItem(MenuItem item) {
@@ -53,6 +58,8 @@ public abstract class Menu {
 
     public void updateBackground() {
         for (int i = 0; i < inventory.getSize(); i++) {
+            if (emptySlots.contains(i)) continue;
+
             if (inventory.getItem(i) == null || inventory.getItem(i).getType().equals(Material.AIR)) {
                 inventory.setItem(i, background);
             }
