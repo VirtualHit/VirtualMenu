@@ -92,4 +92,12 @@ public abstract class Menu {
 
         VirtualMenu.addPlayer(player, this);
     }
+
+    public List<Integer> getEmptySlots() {
+        return emptySlots;
+    }
+
+    public void setEmptySlots(List<Integer> emptySlots) {
+        this.emptySlots = emptySlots;
+    }
 }
