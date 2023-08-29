@@ -7,6 +7,7 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
@@ -99,5 +100,8 @@ public abstract class Menu {
 
     public void setEmptySlots(List<Integer> emptySlots) {
         this.emptySlots = emptySlots;
+    }
+
+    public void onClose(InventoryCloseEvent event) {
     }
 }
