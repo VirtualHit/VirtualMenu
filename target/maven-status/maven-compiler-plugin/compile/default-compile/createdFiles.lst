@@ -6,5 +6,6 @@ es\virtualhit\virtualmenu\listener\InventoryCloseListener.class
 es\virtualhit\virtualmenu\menu\item\MenuItem.class
 es\virtualhit\virtualmenu\VirtualMenu.class
 es\virtualhit\virtualmenu\menu\type\MenuType.class
+es\virtualhit\virtualmenu\utility\SkullCreator.class
 es\virtualhit\virtualmenu\menu\Menu$1.class
 es\virtualhit\virtualmenu\menu\PaginatedMenu.class
