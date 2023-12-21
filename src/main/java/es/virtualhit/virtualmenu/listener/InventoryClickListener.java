@@ -26,12 +26,13 @@ public class InventoryClickListener implements Listener {
         }
 
         try {
-            PlayerClickMenuItemEvent clickEvent = new PlayerClickMenuItemEvent(menu, item);
+            PlayerClickMenuItemEvent clickEvent = new PlayerClickMenuItemEvent(menu, item, event.getClick());
             item.getClickable().onClick(clickEvent);
             event.setCancelled(clickEvent.isCancelled());
         } catch (Exception e) {
             event.setCancelled(true);
             Bukkit.getLogger().warning("Un plugin que usa VirtualMenu ha causado un error al ejecutar el evento de click.");
+            e.printStackTrace();
         }
     }
 }
