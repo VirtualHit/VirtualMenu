@@ -9,6 +9,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.Skull;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.profile.PlayerProfile;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -133,7 +134,8 @@ public class SkullCreator {
         notNull(id, "id");
 
         SkullMeta meta = (SkullMeta) item.getItemMeta();
-        meta.setOwningPlayer(Bukkit.getOfflinePlayer(id));
+        PlayerProfile profile = Bukkit.createPlayerProfile(id, "");
+        meta.setOwnerProfile(profile);
         item.setItemMeta(meta);
 
         return item;
